@@ -1,5 +1,5 @@
 ARG VERSION_NUMBER
-FROM php:7.2-apache
+FROM php:$VERSION_NUMBER-apache
 
 RUN a2enmod rewrite && a2enmod ssl
 
