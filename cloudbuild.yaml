@@ -1,0 +1,10 @@
+substitutions:
+  _DOCKER_VERSION: "latest"
+  _PHP_VERSION: "7.2"
+
+steps:
+- name: 'gcr.io/cloud-builders/docker' 
+  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_PHP_VERSION}', '-f', '/workspace/Dockerfile', '-t', 'gcr.io/${PROJECT_ID}/php-apache:${_DOCKER_VERSION}', '/workspace' ]
+
+images: ['gcr.io/${PROJECT_ID}/php-apache:${_DOCKER_VERSION}']
+
