@@ -1,5 +1,5 @@
 substitutions:
-  _DOCKER_VERSION: "latest"
+  _DOCKER_VERSION: "7.2-1"
   _PHP_VERSION: "7.2"
 
 steps:
